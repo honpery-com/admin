@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "experimentalDecorators": true
+    },
+    "buildOnSave": false,
+    "compileOnSave": false,
+    "exclude": [
+        "node_modules"
+    ],
+    "types": [
+        "node"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "userWebpackText": true
+    }
+}
