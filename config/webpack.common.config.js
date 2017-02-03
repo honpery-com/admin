@@ -4,6 +4,7 @@
 const helpers = require('../helpers/');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HWP = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 
@@ -19,19 +20,28 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.ts$/, loader: 'awesome-typescript-loader' },
-            { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] }
-        ]
+            { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
+            { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+            {test: /\.html$/, loader: 'html-loader'}
+        ],
+        exprContextCritical: false
     },
 
     plugins: [
         // awesome-typescript.
         new CheckerPlugin(),
 
+        // chuck plugin.
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['main', 'vendor', 'polyfill'],
+            minChunks: Infinity
+        }),
+
         // html webpack plugin config.
         new HWP({
             filename: 'index.html',
-            template: helpers.root('src/index.html')
+            template: helpers.root('src/index.html'),
+            chunksSortMode: 'auto'
         })
 
     ]
