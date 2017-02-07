@@ -1,0 +1,7 @@
+@import '../../../style.scss';
+.app-header {
+    background: $app_header_background_color;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

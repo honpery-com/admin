@@ -15,14 +15,16 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx']
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        modules: [helpers.root('node_modules')]
     },
 
     module: {
         loaders: [
             { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-            { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
-            {test: /\.html$/, loader: 'html-loader'}
+            { test: /\.scss$/, loaders: ['to-string-loader', 'css-loader', 'sass-loader'] },
+            { test: /\.html$/, loader: 'html-loader' },
+            { test: /.json$/, loader: 'json-loader' }
         ],
         exprContextCritical: false
     },

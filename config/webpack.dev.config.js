@@ -25,7 +25,6 @@ module.exports = merge(common, {
         contentBase: helpers.root('build'),
         inline: true,
         hot: true,
-        color: true,
         compress: true,
         host: '0.0.0.0',
         port: config.dev.port,

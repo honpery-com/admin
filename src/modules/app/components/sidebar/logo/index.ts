@@ -1,16 +1,12 @@
 /**
- * app main component.
+ * 侧边栏logo组件
  */
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app',
+    selector: 'app-sidebar-logo',
     templateUrl: './index.html',
     styleUrls: ['./style.scss']
 })
-export class AppComponent implements OnInit {
-    constructor() { }
-
-    ngOnInit() {
-    }
+export class AppSidebarLogoComponent {
 }

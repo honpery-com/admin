@@ -1,0 +1,24 @@
+@import '../../../style.scss';
+.app-sidebar {
+    background: $app_sidebar_background_color;
+    height: 100%;
+    position: relative;
+    .logo {
+        display: block;
+        height: $app_header_height;
+    }
+    .sidebar-btn {
+        position: absolute;
+        top: 0;
+        right: -$app_header_height;
+        z-index: 7;
+        height: $app_header_height;
+        width: $app_header_height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            font-size: $app_header_height / 3;
+        }
+    }
+}

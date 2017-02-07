@@ -1,0 +1,29 @@
+@import '../../style.scss';
+.containers {
+    height: 100%;
+    .row {
+        height: 100%;
+        display: flex;
+        background: $app_background_color;
+        .sidebar {
+            width: $app_header_height * 5;
+            height: 100%;
+        }
+        .main {
+            flex-grow: 1;
+            position: relative;
+            height: 100;
+            .header {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: $app_header_height;
+            }
+            .main-cont {
+                padding-top: $app_header_height;
+            }
+        }
+    }
+}

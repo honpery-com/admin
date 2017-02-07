@@ -1,0 +1,19 @@
+@import '../../../style.scss';
+.app-sidebar-menu {
+    .menu-list {
+        color: white;
+        .menu-list-item {
+            display: flex;
+            align-items: center;
+            height: $app_header_height;
+            .e-icon {
+                display: inline-flex;
+                width: $app_header_height;
+                justify-content: center;
+            }
+            .name {
+                flex-grow: 1;
+            }
+        }
+    }
+}
