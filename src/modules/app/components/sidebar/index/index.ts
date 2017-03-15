@@ -9,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./style.scss']
 })
 export class AppSidebarComponent implements OnInit {
+    // show sidebar token
+    private show: boolean = false;
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.show = localStorage.getItem('show_sidebar') === 'true';
+    }
+
+    toggleSidebar() {
+        this.show = !this.show;
+        localStorage.setItem('show_sidebar', (String(this.show)));
+    }
 }

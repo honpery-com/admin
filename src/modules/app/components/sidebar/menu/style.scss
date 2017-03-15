@@ -1,18 +1,35 @@
 @import '../../../style.scss';
-.app-sidebar-menu {
+:host {
+    display: block;
+}
+
+:host /deep/ .app-sidebar-menu {
     .menu-list {
-        color: white;
+        border-bottom: 1px solid $color_light_gray;
         .menu-list-item {
-            display: flex;
-            align-items: center;
-            height: $app_header_height;
-            .e-icon {
-                display: inline-flex;
-                width: $app_header_height;
-                justify-content: center;
-            }
-            .name {
-                flex-grow: 1;
+            border-top: 1px solid $color_light_gray;
+            e-link {
+                width: 100%;
+                .e-link {
+                    display: flex;
+                    height: $app_header_height;
+                    white-space: nowrap;
+                    color: $color_light_black;
+                    overflow: hidden;
+                    .e-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: $app_header_height;
+                        flex: 0 0 $app_header_height;
+                    }
+                    .name {
+                        display: inline-flex;
+                        align-items: center;
+                        flex: 1 1 1px;
+                        padding-left: 0.5rem;
+                    }
+                }
             }
         }
     }

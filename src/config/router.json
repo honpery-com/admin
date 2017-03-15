@@ -1,23 +1,27 @@
 [
     {
         "path": "index",
-        "name": "首页",
+        "name": "HOME",
         "icon": "home"
     },
     {
         "path": "article",
-        "name": "文章",
+        "name": "ARTICLE",
         "icon": "book"
-        
     },
     {
-        "path": "image",
-        "name": "图片",
+        "path": "picture",
+        "name": "PICTURE",
         "icon": "camera"
     },
     {
+        "path": "user",
+        "name": "USER",
+        "icon": "users"
+    },
+    {
         "path": "setting",
-        "name": "设置",
+        "name": "SETTING",
         "icon": "cog"
     }
 ]

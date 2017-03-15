@@ -1,0 +1,17 @@
+[
+    {
+        "path": "index",
+        "name": "首页",
+        "icon": "home"
+    },
+    {
+        "path": "article",
+        "name": "文章",
+        "icon": "book"
+    },
+    {
+        "path": "setting",
+        "name": "设置",
+        "icon": "cogs"
+    }
+]

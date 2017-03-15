@@ -4,7 +4,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app',
+    selector: '#app',
     templateUrl: './index.html',
     styleUrls: ['./style.scss']
 })

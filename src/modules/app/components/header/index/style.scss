@@ -1,6 +1,13 @@
 @import '../../../style.scss';
+:host {
+    display: block;
+    height: $app_header_height;
+    width: 100%;
+}
+
 .app-header {
     background: $app_header_background_color;
+    border-bottom: 1px solid #eee;
     height: 100%;
     display: flex;
     align-items: center;

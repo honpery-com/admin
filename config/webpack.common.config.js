@@ -5,6 +5,7 @@ const helpers = require('../helpers/');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HWP = require('html-webpack-plugin');
 const webpack = require('webpack');
+const { NODE_ENV } = process.env;
 
 module.exports = {
 
@@ -21,7 +22,13 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
+            {
+                test: /\.ts$/,
+                loaders: [
+                    'awesome-typescript-loader',
+                    'angular2-template-loader'
+                ].concat(NODE_ENV === 'prod' ? [] : '@angularclass/hmr-loader')
+            },
             { test: /\.scss$/, loaders: ['to-string-loader', 'css-loader', 'sass-loader'] },
             { test: /\.html$/, loader: 'html-loader' },
             { test: /.json$/, loader: 'json-loader' }

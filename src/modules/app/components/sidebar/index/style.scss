@@ -1,8 +1,16 @@
 @import '../../../style.scss';
+:host {
+    display: block;
+    height: 100%;
+}
+
 .app-sidebar {
     background: $app_sidebar_background_color;
     height: 100%;
     position: relative;
+    width: $app_header_height * 4;
+    transition: $transition_time;
+    border-right: 1px solid $color_light_gray;
     .logo {
         display: block;
         height: $app_header_height;
@@ -12,13 +20,12 @@
         top: 0;
         right: -$app_header_height;
         z-index: 7;
+        font-size: $app_header_height / 3;
         height: $app_header_height;
         width: $app_header_height;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        a {
-            font-size: $app_header_height / 3;
-        }
+    }
+    &.show-sidebar {
+        width: $app_header_height;
+        transition: $transition_time;
     }
 }
