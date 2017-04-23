@@ -2,12 +2,16 @@
  * index module.
  */
 import { NgModule } from '@angular/core';
-import * as components from './components';
+import { HomePagesModule, HomeRoutingModule } from './pages';
+
+const modules = [HomePagesModule];
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [...Object.values(components)],
-    providers: [],
+    imports: modules,
+    exports: modules
 })
 export class HomeModule { }
+
+export {
+    HomeRoutingModule
+};

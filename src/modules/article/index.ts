@@ -2,9 +2,10 @@
  * article module.
  */
 import { NgModule } from '@angular/core';
+import { PublicModule } from '../public';
 
 @NgModule({
-    imports: [],
+    imports: [PublicModule],
     exports: [],
     declarations: [],
     providers: [],

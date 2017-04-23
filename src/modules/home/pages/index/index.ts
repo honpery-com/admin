@@ -4,12 +4,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
-    selector: 'home-index-page',
+    selector: 'home-page',
     templateUrl: './index.html',
     styleUrls: ['./style.scss']
 })
-export class HomeIndexPage implements OnInit {
+export class HomePage implements OnInit {
     constructor() { }
 
     ngOnInit() { }

@@ -1,35 +1,12 @@
 @import '../../../style.scss';
-:host {
+.app-sidebar-menu {
     display: block;
-}
-
-:host /deep/ .app-sidebar-menu {
-    .menu-list {
-        border-bottom: 1px solid $color_light_gray;
-        .menu-list-item {
-            border-top: 1px solid $color_light_gray;
+    .e-ul {
+        .e-li {
+            border-bottom: 1px solid $color_light_gray;
+            height: $app_header_height;
             e-link {
                 width: 100%;
-                .e-link {
-                    display: flex;
-                    height: $app_header_height;
-                    white-space: nowrap;
-                    color: $color_light_black;
-                    overflow: hidden;
-                    .e-icon {
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: $app_header_height;
-                        flex: 0 0 $app_header_height;
-                    }
-                    .name {
-                        display: inline-flex;
-                        align-items: center;
-                        flex: 1 1 1px;
-                        padding-left: 0.5rem;
-                    }
-                }
             }
         }
     }

@@ -1,27 +1,32 @@
 [
     {
         "path": "home",
-        "name": "HOME",
-        "icon": "home"
+        "title": "HOME",
+        "icon": "home",
+        "pages": []
     },
     {
         "path": "article",
-        "name": "ARTICLE",
-        "icon": "book"
+        "title": "ARTICLE",
+        "icon": "book",
+        "pages": []
     },
     {
         "path": "picture",
-        "name": "PICTURE",
-        "icon": "camera"
+        "title": "PICTURE",
+        "icon": "camera",
+        "pages": []
     },
     {
         "path": "user",
-        "name": "USER",
-        "icon": "users"
+        "title": "USER",
+        "icon": "users",
+        "pages": []
     },
     {
         "path": "setting",
-        "name": "SETTING",
-        "icon": "cog"
+        "title": "SETTING",
+        "icon": "cog",
+        "pages": []
     }
 ]

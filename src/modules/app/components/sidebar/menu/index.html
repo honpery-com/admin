@@ -1,10 +1,10 @@
 <div class="app-sidebar-menu">
-    <e-list class="menu-list">
-        <e-li *ngFor="let route of router" class="menu-list-item">
+    <e-ul>
+        <e-li *ngFor="let route of _router">
             <e-link>
-                <i class="e-icon fa fa-{{route.icon}}"></i>
-                <span class="name">{{route.name}}</span>
+                <e-icon [icon]="route.icon"></e-icon>
+                <span class="name">{{route.title}}</span>
             </e-link>
         </e-li>
-    </e-list>
+    </e-ul>
 </div>

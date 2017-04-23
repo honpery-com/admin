@@ -3,18 +3,15 @@
  */
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import * as components from './components/';
-import { ExcurModule } from 'excur-angular';
+import { AppComponent } from './components/index/index';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 import { AppRouterModule } from './router';
+import { PublicModule } from '../public';
+import { AppComponentModule } from './components';
 
 @NgModule({
-    imports: [BrowserModule, CommonModule, ExcurModule, AppRouterModule],
-    declarations: [...Object.values(components)],
-    exports: [],
-    providers: [],
-    bootstrap: [components.AppComponent]
+    imports: [BrowserModule, AppRouterModule, PublicModule, AppComponentModule],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
     constructor(public appRef: ApplicationRef) { }

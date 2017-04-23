@@ -4,9 +4,9 @@
   "description": "honpery.com system admin source.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server",
-    "prod": "NODE_ENV=prod node ./node_modules/webpack/bin/webpack",
-    "test": "NODE_ENV=test node ./node_modules/webpack/bin/webpack"
+    "dev": "NODE_ENV=dev npm link excur-angular && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./config/webpack.dev.config.js",
+    "prod": "NODE_ENV=prod ./node_modules/webpack/bin/webpack.js --config ./config/webpack.prod.config.js",
+    "test": "NODE_ENV=test ./node_modules/webpack/bin/webpack.js --config ./config/webpack.test.config.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "@angular/common": "^4.0.1",
     "@angular/compiler": "^4.0.1",
     "@angular/core": "^4.0.1",
+    "@angular/forms": "^4.0.1",
     "@angular/http": "^4.0.1",
     "@angular/platform-browser": "^4.0.1",
     "@angular/platform-browser-dynamic": "^4.0.1",
