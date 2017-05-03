@@ -6,5 +6,36 @@ $width: $app_header_height * 4;
     height: 100%;
     background: #2b3033;
     flex-direction: column;
-    flex: 0 0 $width;
+    flex: 0 0 auto;
+    position: relative;
+    transition: $transition_time;
+    &.active {
+        width: $app_header_height;
+        transition: $transition_time;
+    }
+    #sidebar-btn {
+        position: absolute;
+        top: 0;
+        right: -$app_header_height;
+        width: $app_header_height;
+        height: $app_header_height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        box-sizing: border-box;
+        e-icon {
+            background: white;
+            transition: $transition_time;
+            border-radius: 0.2rem;
+            font-size: 0.7rem;
+            &:hover {
+                background: $color_light_gray;
+                transition: $transition_time;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

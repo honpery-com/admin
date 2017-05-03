@@ -6,9 +6,17 @@
             display: flex;
             height: $app_header_height;
             align-items: center;
+            color: #6d6d6d;
+            overflow: hidden;
             e-icon {
                 width: $app_header_height;
-                justify-content: center;
+            }
+            .title {
+                display: flex;
+                align-items: center;
+            }
+            .active {
+                color: #d0cccc;
             }
         }
     }

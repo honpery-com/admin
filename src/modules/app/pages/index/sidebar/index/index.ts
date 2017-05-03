@@ -6,6 +6,7 @@ import {
     OnInit,
     ViewEncapsulation
 } from '@angular/core';
+import { SidebarShow } from '../../../../services';
 
 @Component({
     selector: 'app-sidebar',
@@ -13,8 +14,13 @@ import {
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.app-sidebar]': 'true'
+        '[class.app-sidebar]': 'true',
+        '[class.active]': 'sidebarShow.show'
     }
 })
 
-export class AppSidebar { }
+export class AppSidebar {
+    constructor(
+        private sidebarShow: SidebarShow
+    ) { }
+}

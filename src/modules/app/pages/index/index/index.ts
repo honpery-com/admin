@@ -17,4 +17,6 @@ import {
     }
 })
 
-export class AppPage { }
+export class AppPage {
+    constructor() { }
+}

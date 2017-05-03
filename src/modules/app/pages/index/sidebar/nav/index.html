@@ -1,8 +1,8 @@
 <e-ul>
     <e-li *ngFor="let route of _config">
-        <e-link>
+        <e-link [link]="[route.path]" routerLinkActive="active" block="true">
             <e-icon [icon]="route.icon"></e-icon>
-            <span>{{route.title}}</span>
+            <span class="title">{{route.title}}</span>
         </e-link>
     </e-li>
 </e-ul>
