@@ -1,5 +1,5 @@
 /**
- * index page component.
+ * article detail page.
  */
 import {
     Component,
@@ -8,13 +8,10 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'home-page',
+    selector: 'article-detail-page',
     templateUrl: './index.html',
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class HomePage implements OnInit {
-    constructor() { }
 
-    ngOnInit() { }
-}
+export class ArticleDetailPage { }

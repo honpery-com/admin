@@ -1,31 +1,31 @@
 [
     {
         "path": "home",
-        "title": "HOME",
+        "title": "Home",
         "icon": "home",
         "pages": []
     },
     {
         "path": "article",
-        "title": "ARTICLE",
+        "title": "Article",
         "icon": "book",
         "pages": []
     },
     {
         "path": "picture",
-        "title": "PICTURE",
+        "title": "Picture",
         "icon": "camera",
         "pages": []
     },
     {
         "path": "user",
-        "title": "USER",
+        "title": "User",
         "icon": "users",
         "pages": []
     },
     {
         "path": "setting",
-        "title": "SETTING",
+        "title": "Setting",
         "icon": "cog",
         "pages": []
     }

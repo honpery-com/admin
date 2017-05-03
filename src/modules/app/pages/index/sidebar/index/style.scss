@@ -1,0 +1,10 @@
+@import '../../../../style.scss';
+$width: $app_header_height * 4;
+.app-sidebar {
+    display: flex;
+    width: $width;
+    height: 100%;
+    background: #2b3033;
+    flex-direction: column;
+    flex: 0 0 $width;
+}

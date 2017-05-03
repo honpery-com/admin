@@ -3,17 +3,21 @@
  */
 import { NgModule } from '@angular/core';
 import { PublicModule, RoutingModule } from '../../public';
-import * as components from './pages';
+import * as pages from './pages';
+
+const _pages = Object.values(pages);
+
 
 @NgModule({
     imports: [PublicModule],
-    exports: Object.values(components),
-    declarations: Object.values(components)
+    exports: _pages,
+    declarations: _pages
 })
 export class HomePagesModule { }
 
+
 @NgModule({
-    imports: [HomePagesModule, RoutingModule.forRoot(components, 'home')],
+    imports: [HomePagesModule, RoutingModule.forRoot(pages, 'home')],
     exports: [HomePagesModule]
 })
 export class HomeRoutingModule { }

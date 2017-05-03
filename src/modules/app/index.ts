@@ -3,15 +3,15 @@
  */
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './components/index/index';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import { AppRouterModule } from './router';
+import { AppRoutingModule } from './router';
 import { PublicModule } from '../public';
-import { AppComponentModule } from './components';
+import { AppPagesModule } from './pages';
+import { AppPage } from './pages/pages';
 
 @NgModule({
-    imports: [BrowserModule, AppRouterModule, PublicModule, AppComponentModule],
-    bootstrap: [AppComponent]
+    imports: [BrowserModule, AppRoutingModule, PublicModule, AppPagesModule],
+    bootstrap: [AppPage]
 })
 export class AppModule {
     constructor(public appRef: ApplicationRef) { }

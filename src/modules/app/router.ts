@@ -19,4 +19,4 @@ const AppRoutes: Routes = [{ path: '', redirectTo: '/home', pathMatch: 'full' }]
     declarations: [],
     providers: []
 })
-export class AppRouterModule { }
+export class AppRoutingModule { }

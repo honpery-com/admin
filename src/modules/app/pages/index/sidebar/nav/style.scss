@@ -1,0 +1,15 @@
+@import '../../../../style.scss';
+.app-sidebar-nav {
+    display: block;
+    e-ul {
+        e-li {
+            display: flex;
+            height: $app_header_height;
+            align-items: center;
+            e-icon {
+                width: $app_header_height;
+                justify-content: center;
+            }
+        }
+    }
+}
