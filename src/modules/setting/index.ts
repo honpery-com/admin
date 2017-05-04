@@ -3,10 +3,13 @@
  */
 import { NgModule } from '@angular/core';
 
+import { SettingPagesModule } from './pages';
+export * from './pages';
+
+const _modules = [SettingPagesModule];
+
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [],
-    providers: [],
+    imports: _modules,
+    exports: _modules
 })
 export class SettingModule { }

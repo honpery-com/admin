@@ -39,18 +39,33 @@
         "path": "picture",
         "title": "Picture",
         "icon": "camera",
-        "pages": []
+        "pages": [
+            {
+                "path": "",
+                "title": "图片"
+            }
+        ]
     },
     {
         "path": "user",
         "title": "User",
         "icon": "users",
-        "pages": []
+        "pages": [
+            {
+                "path": "",
+                "title": "用户"
+            }
+        ]
     },
     {
         "path": "setting",
         "title": "Setting",
         "icon": "cog",
-        "pages": []
+        "pages": [
+            {
+                "path": "",
+                "title": "设置"
+            }
+        ]
     }
 ]
