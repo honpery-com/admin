@@ -1,5 +1,5 @@
 /**
- * gen module router.
+ * module router gen.
  */
 import { RouterModule } from '@angular/router';
 import { bigCamel } from '../../utils';
@@ -24,15 +24,16 @@ export class RoutingModule {
             };
 
             if (page.children.length) {
-                result.children = page.children.map(child => {
+                page.children.forEach(child => {
+                    if (!child.path) return;
                     let childName = child.name ? child.name.split('_') : [child.path];
-                    return {
+                    result.children.push({
                         path: child.path,
                         data: {
                             title: child.title
                         },
-                        component: components[bigCamel(moduleName, pageName, childName, 'page')]
-                    };
+                        component: components[bigCamel(moduleName, ...pageName, ...childName, 'page')]
+                    });
                 });
                 result.children.push({ path: '', redirectTo: page.children[0].path, pathMatch: 'full' });
             }

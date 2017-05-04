@@ -7,7 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ExcurModule } from 'excur-angular';
 
-const modules = [CommonModule, RouterModule, FormsModule, ExcurModule];
+import { PublicComponentsModule } from './components';
+export * from './components';
+
+
+const modules = [CommonModule, RouterModule, FormsModule, ExcurModule, PublicComponentsModule];
 
 @NgModule({
     imports: modules,

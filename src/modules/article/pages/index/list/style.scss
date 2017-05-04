@@ -1,0 +1,18 @@
+@import '../../../style.scss';
+$width: $app_header_height * 6;
+.article-index-list {
+    background: white;
+    height: 100%;
+    width: $width;
+    flex: 0 0 $width;
+    &>header {
+        height: $app_header_height;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $hr_color;
+        padding: 0 0.5rem;
+        e-button {
+            margin-left: auto;
+        }
+    }
+}

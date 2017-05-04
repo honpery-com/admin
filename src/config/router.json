@@ -9,7 +9,31 @@
         "path": "article",
         "title": "Article",
         "icon": "book",
-        "pages": []
+        "pages": [
+            {
+                "path": "",
+                "children": [
+                    {
+                        "path": "",
+                        "title": "文章列表"
+                    },
+                    {
+                        "path": ":article_id",
+                        "name": "detail",
+                        "title": "文章详情"
+                    }
+                ]
+            },
+            {
+                "path": "add",
+                "title": "创建文章"
+            },
+            {
+                "path": ":article_id/edit",
+                "name": "edit",
+                "title": "编辑文章"
+            }
+        ]
     },
     {
         "path": "picture",
