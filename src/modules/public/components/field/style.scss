@@ -1,0 +1,17 @@
+@import '../../style.scss';
+._field {
+    display: flex;
+    e-icon {
+        margin-right: 0.5rem;
+        color: $color_gray;
+    }
+    &.block {
+        width: 100%;
+    }
+    &.inline {
+        display: inline-flex;
+        &+._field.inline {
+            margin-left: 1rem;
+        }
+    }
+}

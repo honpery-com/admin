@@ -4,7 +4,7 @@
   "description": "honpery.com system admin source.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev npm link excur-angular && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./config/webpack.dev.config.js",
+    "dev": "NODE_ENV=dev npm link excur-angular && npm link sdk_honpery_com && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./config/webpack.dev.config.js",
     "prod": "NODE_ENV=prod ./node_modules/webpack/bin/webpack.js --config ./config/webpack.prod.config.js",
     "test": "NODE_ENV=test ./node_modules/webpack/bin/webpack.js --config ./config/webpack.test.config.js"
   },
@@ -50,6 +50,7 @@
     "excur-angular": "0.0.1",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.1.0",
+    "sdk_honpery_com": "^1.0.0",
     "zone.js": "^0.8.5"
   }
 }
