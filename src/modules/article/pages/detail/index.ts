@@ -6,6 +6,8 @@ import {
     OnInit,
     ViewEncapsulation
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ArticleAPI, Article } from 'sdk_honpery_com';
 
 @Component({
     selector: 'article-detail-page',
@@ -14,4 +16,19 @@ import {
     encapsulation: ViewEncapsulation.None
 })
 
-export class ArticleDetailPage { }
+export class ArticleDetailPage implements OnInit {
+
+    private _article: Article = {};
+
+    constructor(
+        private _router: ActivatedRoute
+    ) { }
+
+    ngOnInit() {
+        this._router.params
+            .concatMap(({ article_id }) => ArticleAPI.detail(article_id))
+            .subscribe(article => this._article = article);
+    }
+
+
+}

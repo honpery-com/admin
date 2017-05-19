@@ -14,11 +14,13 @@ import {
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
+        '[class]': '_class',
         '[class._page]': 'true'
     }
 })
 
 export class Page implements OnInit {
+    @Input('class') private _class = '';
     constructor() { }
 
     ngOnInit() { }

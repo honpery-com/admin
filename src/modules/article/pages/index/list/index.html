@@ -1,17 +1,21 @@
 <header>
-    <e-button size="small" color="blue">创建</e-button>
+    <e-button size="small" color="blue">
+        <e-link link="add">创建</e-link>
+    </e-button>
     <e-select></e-select>
 </header>
 
 <e-ul>
     <e-li *ngFor="let article of _articles | async">
-        <h6>{{article?.title}}</h6>
-        <p class="create-info">
-            <field inline="true" icon="clock-o">{{article?.create_time | date : 'yyyy-MM-dd'}}</field>
-            <field inline="true" icon="user">{{article?.create_user}}</field>
-        </p>
-        <p class="article-info">
-            <field inline="true" icon="category">{{article?.category}}</field>
-        </p>
+        <e-link block="true" [link]="['/article', article._id]" routerLinkActive="active">
+            <h6>{{article?.title}}</h6>
+            <p class="create-info">
+                <field inline="true" icon="clock-o">{{article?.create_time | date : 'yyyy-MM-dd'}}</field>
+                <field inline="true" icon="user">{{article?.create_user}}</field>
+            </p>
+            <p class="article-info">
+                <field inline="true" icon="folder-open-o">{{article?.category}}</field>
+            </p>
+        </e-link>
     </e-li>
 </e-ul>

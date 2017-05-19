@@ -1,5 +1,15 @@
+@import '../../../style.scss';
 .article-page {
-    display: flex;
     height: 100%;
     width: 100%;
+    .detail {
+        flex: 1 1 1px;
+        border-left: 1px solid $hr_color;
+        header {
+            display: flex;
+            height: $app_header_height * 0.8;
+            justify-content: center;
+            background: white;
+        }
+    }
 }

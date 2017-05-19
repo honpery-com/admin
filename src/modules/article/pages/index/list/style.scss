@@ -18,28 +18,35 @@ $width: $app_header_height * 6;
     e-ul {
         e-li {
             border-bottom: 1px solid $hr_color;
-            padding: 0.5rem 1rem 0.7rem;
-            h6 {
-                line-height: 2rem;
-                font-size: 0.7rem;
-            }
-            p {
-                font-size: 0.6rem;
-            }
-            .create-info,
-            .article-info {
-                display: flex;
-                width: 100%;
-            }
-            .article-info {
-                display: none;
-            }
-            &:hover {
-                .article-info {
-                    display: flex;
-                }
-                .create-info {
-                    display: none;
+            e-link {
+                a {
+                    padding: 0.5rem 1rem 0.7rem;
+                    h6 {
+                        line-height: 2rem;
+                        font-size: 0.7rem;
+                    }
+                    p {
+                        font-size: 0.6rem;
+                    }
+                    .create-info,
+                    .article-info {
+                        display: flex;
+                        width: 100%;
+                    }
+                    .article-info {
+                        display: none;
+                    }
+                    &.active {
+                        background: #fbfaf8;
+                    }
+                    &:hover {
+                        .article-info {
+                            display: flex;
+                        }
+                        .create-info {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

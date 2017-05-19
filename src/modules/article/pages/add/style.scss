@@ -1,0 +1,27 @@
+article-add-page {
+    display: block;
+    height: 100%;
+    .article-add-page {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .toolbar {
+            height: 2rem;
+            background: #f1f1f1;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .content {
+            display: flex;
+            flex: 1 1 1px;
+            &>* {
+                flex: 1 1 1px;
+            }
+            .editor {
+                background: white;
+            }
+            .preview {
+                background: #fbfbfb;
+            }
+        }
+    }
+}

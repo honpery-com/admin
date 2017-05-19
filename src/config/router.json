@@ -11,6 +11,15 @@
         "icon": "book",
         "pages": [
             {
+                "path": "add",
+                "title": "创建文章"
+            },
+            {
+                "path": ":article_id/edit",
+                "name": "edit",
+                "title": "编辑文章"
+            },
+            {
                 "path": "",
                 "children": [
                     {
@@ -23,15 +32,6 @@
                         "title": "文章详情"
                     }
                 ]
-            },
-            {
-                "path": "add",
-                "title": "创建文章"
-            },
-            {
-                "path": ":article_id/edit",
-                "name": "edit",
-                "title": "编辑文章"
             }
         ]
     },
