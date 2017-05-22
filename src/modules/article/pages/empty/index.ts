@@ -18,7 +18,7 @@ import {
     }
 })
 
-export class ArticleIndexEmpty implements OnInit {
+export class ArticleEmptyPage implements OnInit {
     constructor() { }
 
     ngOnInit() { }

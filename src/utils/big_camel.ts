@@ -1,7 +1,6 @@
 /**
  * to big camel case.
  */
-export const bigCamel = (...paths: string[]) => paths.map((path = '') => {
-    let result = path.toLowerCase();
-    return result.charAt(0).toUpperCase() + result.substr(1);
-}).join('');
+export function bigCamel(...paths: string[]) {
+    return paths.map((path = '') => path.charAt(0).toUpperCase() + path.substr(1)).join('');
+}

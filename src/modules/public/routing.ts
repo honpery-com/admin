@@ -7,40 +7,34 @@ const config = require('../../config/router.json');
 
 export class RoutingModule {
     static forRoot(components, moduleName) {
-        const current = config.filter(item => item.path === moduleName)[0];
 
-        let router = current.pages.map(page => {
-            page.children = page.children || [];
+        const moduleConfig = config.filter(item => item.path === moduleName)[0];
 
-            let pageName = page.name ? page.name.split('_') : [page.path];
-            let result = {
-                path: page.path,
-                component: components[bigCamel(moduleName, ...pageName, 'page')],
+        if (!moduleConfig) throw new Error(`Module router error: ${moduleName} not find.`);
+
+        let names = [];
+        function genConfig(ref) {
+            names.push(ref.name || ref.path);
+            ref.children = ref.children || [];
+            let result: any = {
+                path: ref.path,
+                children: [],
                 data: {
-                    title: page.title,
-                    children: page.children
+                    title: ref.title,
+                    children: ref.children
                 },
-                children: []
+                componentName: bigCamel(...bigCamel(...names, 'page').split('_')),
+                component: components[bigCamel(...bigCamel(...names, 'page').split('_'))]
             };
-
-            if (page.children.length) {
-                page.children.forEach(child => {
-                    if (!child.path) return;
-                    let childName = child.name ? child.name.split('_') : [child.path];
-                    result.children.push({
-                        path: child.path,
-                        data: {
-                            title: child.title
-                        },
-                        component: components[bigCamel(moduleName, ...pageName, ...childName, 'page')]
-                    });
-                });
-                result.children.push({ path: '', redirectTo: page.children[0].path, pathMatch: 'full' });
+            if (ref.children.length) {
+                result.children = ref.children.map(child => genConfig(child));
+                result.children.push({ path: '', redirectTo: ref.children[0].path, pathMatch: 'full' });
             }
-
+            names.pop();
             return result;
-        });
+        }
 
-        return RouterModule.forChild(router);
+        let result = <any>genConfig(moduleConfig).children;
+        return RouterModule.forChild(result);
     }
 }

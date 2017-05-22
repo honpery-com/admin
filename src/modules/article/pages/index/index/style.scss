@@ -8,8 +8,12 @@
         header {
             display: flex;
             height: $app_header_height * 0.8;
-            justify-content: center;
+            align-items: center;
             background: white;
+            padding: 0 0.5rem;
+            .right {
+                margin-left: auto;
+            }
         }
     }
 }

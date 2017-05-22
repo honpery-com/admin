@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import * as pages from './pages';
 import { PublicModule, RoutingModule } from '../../public';
 
-const _pages = [...Object.values(pages)];
+const _pages = Object.values(pages);
 
 
 @NgModule({
