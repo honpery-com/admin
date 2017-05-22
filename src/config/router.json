@@ -54,12 +54,18 @@
         "icon": "list-alt",
         "children": [
             {
-                "path": "category",
-                "title": "分类"
-            },
-            {
-                "path": "tag",
-                "title": "标签"
+                "path": "",
+                "title": "基础",
+                "children": [
+                    {
+                        "path": "category",
+                        "title": "分类"
+                    },
+                    {
+                        "path": "tag",
+                        "title": "标签"
+                    }
+                ]
             }
         ]
     },
