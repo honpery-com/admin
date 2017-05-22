@@ -1,30 +1,27 @@
 /**
- * page component.
+ * page header component.
  */
 import {
     Component,
     OnInit,
-    Input,
-    ViewEncapsulation
+    ViewEncapsulation,
+    Input
 } from '@angular/core';
 
 @Component({
-    selector: 'page',
-    template: '<ng-content></ng-content>',
+    selector: 'page-header',
+    template: `<ng-content></ng-content>`,
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
         '[class]': '_class',
-        '[class._page]': 'true',
-        '[class.wrap]': '_wrap'
+        '[class.page-header]': 'true'
     }
 })
 
-export class Page implements OnInit {
+export class PageHeader implements OnInit {
 
     @Input('class') private _class = '';
-
-    @Input('wrap') private _wrap = false;
 
     constructor() { }
 

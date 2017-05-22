@@ -1,0 +1,27 @@
+@import '../../../../style.scss';
+.header-nav {
+    height: 100%;
+    .e-ul {
+        height: 100%;
+        .e-li {
+            margin-right: 0.2rem;
+            height: 100%;
+            .e-link {
+                a {
+                    padding: 0 0.5rem;
+                    height: 100%;
+                    box-sizing: border-box;
+                    font-size: 0.7rem;
+                    color: #9a9999;
+                    transition: $transition_time;
+                    border-bottom: 2px solid transparent;
+                    &.active {
+                        border-bottom-color: $color_header_nav_active;
+                        color: $color_light_black;
+                        transition: $transition_time;
+                    }
+                }
+            }
+        }
+    }
+}

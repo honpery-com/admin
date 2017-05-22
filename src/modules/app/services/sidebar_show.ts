@@ -14,7 +14,6 @@ export class SidebarShow {
     }
 
     toggle() {
-        console.log(this.show);
         this.show = !this.show;
         localStorage.setItem('sidebar_show', this.show + '');
     }

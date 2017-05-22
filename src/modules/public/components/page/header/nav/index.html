@@ -1,0 +1,5 @@
+<e-ul inline="true">
+    <e-li *ngFor="let item of _nav">
+        <e-link [link]="item.path" routerLinkActive="active" block="true">{{item.title}}</e-link>
+    </e-li>
+</e-ul>

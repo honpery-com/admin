@@ -1,0 +1,9 @@
+@import '../../../../style.scss';
+.page-header {
+    background: white;
+    height: $app_header_height;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 $app_header_height;
+}
