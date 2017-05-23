@@ -10,7 +10,6 @@
                 a {
                     padding: 0 0.5rem;
                     height: 100%;
-                    box-sizing: border-box;
                     font-size: 0.7rem;
                     color: #9a9999;
                     transition: $transition_time;
@@ -18,6 +17,7 @@
                     &.active {
                         border-bottom-color: $color_header_nav_active;
                         color: $color_light_black;
+                        font-weight: bold;
                         transition: $transition_time;
                     }
                 }

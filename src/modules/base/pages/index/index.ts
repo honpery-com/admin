@@ -11,7 +11,10 @@ import {
     selector: 'base-page',
     templateUrl: './index.html',
     styleUrls: ['./style.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        '[class]': '"base-page page"'
+    }
 })
 
 export class BasePage implements OnInit {

@@ -15,6 +15,11 @@ import {
 })
 
 export class BaseCategoryPage implements OnInit {
+
+    private _loading = false;
+
+    private _saving = false;
+
     constructor() { }
 
     ngOnInit() { }
