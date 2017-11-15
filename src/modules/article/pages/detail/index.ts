@@ -1,11 +1,7 @@
 /**
  * article detail page.
  */
-import {
-    Component,
-    OnInit,
-    ViewEncapsulation,
-} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article, ArticleAPI } from 'sdk_honpery_com';
 

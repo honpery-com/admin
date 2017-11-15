@@ -4,7 +4,6 @@ import * as extractTextPlugin from 'extract-text-webpack-plugin';
 import * as hwp from 'html-webpack-plugin';
 import * as path from 'path';
 import { Configuration, HotModuleReplacementPlugin, optimize } from 'webpack';
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const Root = (...paths: string[]) => path.join(__dirname, ...paths);
 
@@ -65,8 +64,6 @@ const Base: Configuration = {
             filename: 'index.html',
             template: Root('./src/index.html'),
         }),
-
-        new DashboardPlugin(),
 
         new extractTextPlugin('style.css'),
     ],

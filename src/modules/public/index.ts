@@ -5,12 +5,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ExcurModule } from 'excur-angular';
 
 import { PublicComponentsModule } from './components';
 export * from './components';
 
-const modules = [CommonModule, RouterModule, FormsModule, ExcurModule, PublicComponentsModule];
+const modules = [CommonModule, RouterModule, FormsModule, PublicComponentsModule];
 
 @NgModule({
     imports: modules,

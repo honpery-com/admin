@@ -4,22 +4,23 @@
 import { ApplicationRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
+import { Log } from '../../utils';
 import { PublicModule } from '../public';
 import { AppPagesModule } from './pages';
-import { AppPage } from './pages/pages';
+import { App } from './pages/pages';
 import { AppRoutingModule } from './router';
 
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, PublicModule, AppPagesModule],
-    bootstrap: [AppPage],
+    bootstrap: [App],
 })
 export class AppModule {
     constructor(public appRef: ApplicationRef) { }
 
-    hmrOnInit(store) {
+    hmrOnInit(store: any) {
         if (!store || !store.state) return;
-        console.log('HMR store', store);
-        console.log('store.state.data:', store.state.data);
+        Log.log('HMR store', store);
+        Log.log('store.state.data:', store.state.data);
         // inject AppStore here and update it
         // this.AppStore.update(store.state)
         if ('restoreInputValues' in store) {
@@ -31,7 +32,7 @@ export class AppModule {
         delete store.restoreInputValues;
     }
 
-    hmrOnDestroy(store) {
+    hmrOnDestroy(store: any) {
         const cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
         // recreate elements
         store.disposeOldHosts = createNewHosts(cmpLocation);
@@ -45,7 +46,7 @@ export class AppModule {
         removeNgStyles();
     }
 
-    hmrAfterDestroy(store) {
+    hmrAfterDestroy(store: any) {
         // display new elements
         store.disposeOldHosts();
         delete store.disposeOldHosts;
