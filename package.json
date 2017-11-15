@@ -1,5 +1,5 @@
 {
-    "name": "admin_honpery_com",
+    "name": "@honpery-com/admin",
     "version": "0.0.1",
     "description": "admin.honpery.com system admin source.",
     "main": "index.js",
@@ -15,6 +15,7 @@
     },
     "author": "honpery <honpery@gmail.com>",
     "license": "MIT",
+    "private": true,
     "bugs": {
         "url": "https://github.com/honpery-com/admin/issues"
     },

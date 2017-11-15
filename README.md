@@ -3,8 +3,10 @@
 > 后台管理系统。
 
 #### 技术选型
+
 - [TypeScript](https://www.typescriptlang.org/)
 - [Angular](https://angular.io/)
+- [Excur](https://excur.io)
 
 #### 模块
 
