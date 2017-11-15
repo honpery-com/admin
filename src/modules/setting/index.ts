@@ -10,6 +10,6 @@ const _modules = [SettingPagesModule];
 
 @NgModule({
     imports: _modules,
-    exports: _modules
+    exports: _modules,
 })
 export class SettingModule { }

@@ -8,10 +8,10 @@ const modules = [HomePagesModule];
 
 @NgModule({
     imports: modules,
-    exports: modules
+    exports: modules,
 })
 export class HomeModule { }
 
 export {
-    HomeRoutingModule
+    HomeRoutingModule,
 };

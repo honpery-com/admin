@@ -4,7 +4,7 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -14,15 +14,15 @@ import { ActivatedRoute, Router } from '@angular/router';
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.header-nav]': 'true'
-    }
+        '[class.header-nav]': 'true',
+    },
 })
 
 export class HeaderNav implements OnInit {
 
     private _nav: Router[] = [];
     constructor(
-        private _router: ActivatedRoute
+        private _router: ActivatedRoute,
     ) { }
 
     ngOnInit() {

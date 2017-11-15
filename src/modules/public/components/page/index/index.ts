@@ -3,9 +3,9 @@
  */
 import {
     Component,
-    OnInit,
     Input,
-    ViewEncapsulation
+    OnInit,
+    ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
@@ -16,8 +16,8 @@ import {
     host: {
         '[class]': '_class',
         '[class._page]': 'true',
-        '[class.wrap]': '_wrap'
-    }
+        '[class.wrap]': '_wrap',
+    },
 })
 
 export class Page implements OnInit {

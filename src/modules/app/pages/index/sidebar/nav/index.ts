@@ -4,9 +4,9 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
-const config = require('../../../../../../config/router.json')
+const config = require('../../../../../../config/router.json');
 
 @Component({
     selector: 'app-sidebar-nav',
@@ -14,8 +14,8 @@ const config = require('../../../../../../config/router.json')
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.app-sidebar-nav]': 'true'
-    }
+        '[class.app-sidebar-nav]': 'true',
+    },
 })
 
 export class AppSidebarNav {

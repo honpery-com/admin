@@ -3,9 +3,9 @@
  */
 import {
     Component,
-    OnInit,
     Input,
-    ViewEncapsulation
+    OnInit,
+    ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
@@ -16,8 +16,8 @@ import {
     host: {
         '[class._field]': 'true',
         '[class.block]': 'block',
-        '[class.inline]': 'inline'
-    }
+        '[class.inline]': 'inline',
+    },
 })
 
 export class Field {

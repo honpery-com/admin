@@ -4,7 +4,7 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
@@ -13,8 +13,8 @@ import {
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class]': '"base-page page"'
-    }
+        '[class]': '"base-page page"',
+    },
 })
 
 export class BasePage implements OnInit {

@@ -3,9 +3,9 @@
  */
 import {
     Component,
+    Input,
     OnInit,
     ViewEncapsulation,
-    Input
 } from '@angular/core';
 
 @Component({
@@ -14,8 +14,8 @@ import {
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.article-index-empty]': 'true'
-    }
+        '[class.article-index-empty]': 'true',
+    },
 })
 
 export class ArticleEmptyPage implements OnInit {

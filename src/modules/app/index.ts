@@ -1,17 +1,17 @@
 /**
  * app module.
  */
-import { NgModule, ApplicationRef } from '@angular/core';
+import { ApplicationRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-import { AppRoutingModule } from './router';
+import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import { PublicModule } from '../public';
 import { AppPagesModule } from './pages';
 import { AppPage } from './pages/pages';
+import { AppRoutingModule } from './router';
 
 @NgModule({
     imports: [BrowserModule, AppRoutingModule, PublicModule, AppPagesModule],
-    bootstrap: [AppPage]
+    bootstrap: [AppPage],
 })
 export class AppModule {
     constructor(public appRef: ApplicationRef) { }
@@ -19,7 +19,7 @@ export class AppModule {
     hmrOnInit(store) {
         if (!store || !store.state) return;
         console.log('HMR store', store);
-        console.log('store.state.data:', store.state.data)
+        console.log('store.state.data:', store.state.data);
         // inject AppStore here and update it
         // this.AppStore.update(store.state)
         if ('restoreInputValues' in store) {
@@ -32,9 +32,9 @@ export class AppModule {
     }
 
     hmrOnDestroy(store) {
-        var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+        const cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
         // recreate elements
-        store.disposeOldHosts = createNewHosts(cmpLocation)
+        store.disposeOldHosts = createNewHosts(cmpLocation);
         // inject your AppStore and grab state then set it on store
         // var appState = this.AppStore.get()
         store.state = { data: 'yolo' };
@@ -47,7 +47,7 @@ export class AppModule {
 
     hmrAfterDestroy(store) {
         // display new elements
-        store.disposeOldHosts()
+        store.disposeOldHosts();
         delete store.disposeOldHosts;
         // anything you need done the component is removed
     }

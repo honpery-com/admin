@@ -1,3 +1,3 @@
-import "es6-shim";
-import "zone.js";
+import 'es6-shim';
 import 'reflect-metadata';
+import 'zone.js';

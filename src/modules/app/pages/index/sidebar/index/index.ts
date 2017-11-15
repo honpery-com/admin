@@ -4,7 +4,7 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
 import { SidebarShow } from '../../../../services';
 
@@ -15,12 +15,12 @@ import { SidebarShow } from '../../../../services';
     encapsulation: ViewEncapsulation.None,
     host: {
         '[class.app-sidebar]': 'true',
-        '[class.active]': 'sidebarShow.show'
-    }
+        '[class.active]': 'sidebarShow.show',
+    },
 })
 
 export class AppSidebar {
     constructor(
-        private sidebarShow: SidebarShow
+        private sidebarShow: SidebarShow,
     ) { }
 }

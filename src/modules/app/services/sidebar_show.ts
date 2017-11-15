@@ -9,7 +9,7 @@ export class SidebarShow {
     show = false;
 
     constructor() {
-        let value = localStorage.getItem('sidebar_show');
+        const value = localStorage.getItem('sidebar_show');
         if (value === 'true') this.show = true;
     }
 

@@ -10,6 +10,6 @@ const modules = [ArticlePagesModule];
 
 @NgModule({
     imports: modules,
-    exports: modules
+    exports: modules,
 })
 export class ArticleModule { }

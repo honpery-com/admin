@@ -4,14 +4,14 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
     selector: 'setting-page',
     templateUrl: './index.html',
     styleUrls: ['./style.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 
 export class SettingPage implements OnInit {

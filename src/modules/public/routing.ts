@@ -12,19 +12,19 @@ export class RoutingModule {
 
         if (!moduleConfig) throw new Error(`Module router error: ${moduleName} not find.`);
 
-        let names = [];
+        const names = [];
         function genConfig(ref) {
             names.push(ref.name || ref.path);
             ref.children = ref.children || [];
-            let result: any = {
+            const result: any = {
                 path: ref.path,
                 children: [],
                 data: {
                     title: ref.title,
-                    children: ref.children
+                    children: ref.children,
                 },
                 componentName: bigCamel(...bigCamel(...names, 'page').split('_')),
-                component: components[bigCamel(...bigCamel(...names, 'page').split('_'))]
+                component: components[bigCamel(...bigCamel(...names, 'page').split('_'))],
             };
             if (ref.children.length) {
                 result.children = ref.children.map(child => genConfig(child));
@@ -34,7 +34,7 @@ export class RoutingModule {
             return result;
         }
 
-        let result = <any>genConfig(moduleConfig).children;
+        const result = genConfig(moduleConfig).children as any;
         return RouterModule.forChild(result);
     }
 }

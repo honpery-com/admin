@@ -10,13 +10,13 @@ const AppRoutes: Routes = [{ path: '', redirectTo: '/home', pathMatch: 'full' }]
     .concat(routerConfig.map(route => ({
         path: route.path,
         loadChildren: () => new Promise(resolve => (require as any).ensure([], () =>
-            resolve(require(`../${route.path}/index`)[bigCamel(route.path, 'routing', 'module')])))
+            resolve(require(`../${route.path}/index`)[bigCamel(route.path, 'routing', 'module')]))),
     })));
 
 @NgModule({
     imports: [RouterModule, RouterModule.forRoot(AppRoutes)],
     exports: [RouterModule],
     declarations: [],
-    providers: []
+    providers: [],
 })
 export class AppRoutingModule { }

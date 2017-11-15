@@ -3,12 +3,12 @@
  */
 import {
     Component,
+    Input,
     OnInit,
     ViewEncapsulation,
-    Input
 } from '@angular/core';
-import { ArticleAPI, Article, ArticleId } from 'sdk_honpery_com';
 import { Observable } from 'rxjs/Rx';
+import { Article, ArticleAPI, ArticleId } from 'sdk_honpery_com';
 
 @Component({
     selector: 'article-index-list',
@@ -16,8 +16,8 @@ import { Observable } from 'rxjs/Rx';
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.article-index-list]': 'true'
-    }
+        '[class.article-index-list]': 'true',
+    },
 })
 
 export class ArticleIndexList implements OnInit {

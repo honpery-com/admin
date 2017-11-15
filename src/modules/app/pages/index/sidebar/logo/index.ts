@@ -4,7 +4,7 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
 } from '@angular/core';
 
 @Component({
@@ -13,8 +13,8 @@ import {
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None,
     host: {
-        '[class.app-sidebar-logo]': 'true'
-    }
+        '[class.app-sidebar-logo]': 'true',
+    },
 })
 
 export class AppSidebarLogo { }

@@ -11,11 +11,11 @@ const _pages = Object.values(pages);
 @NgModule({
     imports: [PublicModule],
     exports: _pages,
-    declarations: _pages
+    declarations: _pages,
 })
 export class SettingPagesModule { }
 
 @NgModule({
-    imports: [SettingPagesModule, RoutingModule.forRoot(pages, 'setting')]
+    imports: [SettingPagesModule, RoutingModule.forRoot(pages, 'setting')],
 })
 export class SettingRoutingModule { }

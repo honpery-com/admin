@@ -3,9 +3,9 @@
  */
 import {
     Component,
+    Input,
     OnInit,
     ViewEncapsulation,
-    Input
 } from '@angular/core';
 
 @Component({
@@ -15,8 +15,8 @@ import {
     encapsulation: ViewEncapsulation.None,
     host: {
         '[class]': '_class',
-        '[class.page-header]': 'true'
-    }
+        '[class.page-header]': 'true',
+    },
 })
 
 export class PageHeader implements OnInit {
